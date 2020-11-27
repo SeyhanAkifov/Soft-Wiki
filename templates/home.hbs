@@ -1,0 +1,58 @@
+{{> header}}
+
+<div class="content">
+
+   {{#if loggedIn}}
+    <section class="js">
+        <h2>JavaScript</h2>
+        <div class="articles">
+            {{#if articlesJavaScript}}
+            {{#each articlesJavaScript}}
+            {{> article}}
+            {{/each}}
+            {{else}}
+            {{> noArticleMessage}}
+            {{/if}}
+        </div>
+    </section>
+
+    <section class="CSharp">
+        <h2>C#</h2>
+        <div class="articles">
+            {{#if articlesCSharp}}
+            {{#each articlesCSharp}}
+            {{> article}}
+            {{/each}}
+            {{else}}
+            {{> noArticleMessage}}
+            {{/if}}
+        </div>
+    </section>
+    <section class="Java">
+        <h2>Java</h2>
+        <div class="articles">
+            {{#if articlesJava}}
+            {{#each articlesJava}}
+            {{> article}}
+            {{/each}}
+            {{else}}
+            {{> noArticleMessage}}
+            {{/if}}
+        </div>
+    </section>
+    <section class="Pyton">
+        <h2>Pyton</h2>
+        <div class="articles">
+            {{#if articlesPython}}
+            {{#each articlesPython}}
+            {{> article}}
+            {{/each}}
+            {{else}}
+            {{> noArticleMessage}}
+            {{/if}}
+        </div>
+    </section>
+    {{/if}}
+</div>
+
+{{> footer}}
